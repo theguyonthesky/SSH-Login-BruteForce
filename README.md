@@ -27,9 +27,9 @@ The SSH Brute-Force Script is a Python-based tool designed to automate the proce
 # Tools and Technologies Used
 - Python – Main programming language
 
-- pwntools – For easy SSH interactions and exploit development
+- `pwntools` – For easy SSH interactions and exploit development
 
-- paramiko – Handles SSH authentication exceptions
+- `paramiko` – Handles SSH authentication exceptions
 
 - Linux (Kali) – Typical target/test environment
 

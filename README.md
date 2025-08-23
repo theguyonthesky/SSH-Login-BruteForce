@@ -15,34 +15,42 @@ The SSH Brute-Force Script is a Python-based tool designed to automate the proce
   
 # How It Works
 1. The script reads a password list file line by line.
+
 2. For each password:
    - Attempts an SSH login using the `ssh()` method from `pwntools`.
    - If successful, prints the valid password and exits.
    - If login fails (triggering a `paramiko.AuthenticationException`, which is used under the hood by `pwntools`), it continues to the next password.
+
 3. Tracks and displays the number of attempts made.
 
 
 # Tools and Technologies Used
 - Python – Main programming language
+
 - pwntools – For easy SSH interactions and exploit development
+
 - paramiko – Handles SSH authentication exceptions
+
 - Linux (Kali) – Typical target/test environment
 
 # Files
-- `ShellCodeLoader.cpp`: Contains the C++ code for the shellcode loader, involving dynamic API call resolution, AES decryption, and shellcode execution in a newly allocated memory region. Please reference this file for a detailed code walkthrough.
-- `ShellCodeYara.yara`: A YARA rule designed to detect the presence or usage of the provided shellcode loader in analyzed files or memory, targeting API calls and characteristic strings.
+- `ssh_bruteforce.py`: The main python script that performs the SSH brute-force attack.
+
+- `top20ssh-common-passwords.txt`: A password list of 20 commonly used SSH credentials. (You can use any .txt wordlist or create your own)
 
 # How to Run
 1. Clone or download this repository
-2. Set up dependencies and compile
-    - ## Shellcode Loader
-    - Dependencies: Requires a C++ compiler (e.g., MinGW, Visual Studio)
-    - Compilation: Compile `ShellCodeLoader.cpp` using a C++ compiler targeting the intended architecture (32/64 bit) with: <br>g++ ShellCodeLoader.cpp -o ShellCodeLoader.exe -lcrypt32 -ladvapi32 <br>Or use the Run button in your IDE (e.g., Visual Studio) to compile and run the program.
-  
-    - ## YARA Rule
-    - Dependencies: Install YARA: Refer to the official YARA documentation for installation and usage details.
-    - Usage: Utilize ShellCodeYara.yara to scan files or memory for indications of the shellcode loader using: yara -r ShellCodeYara.yara [directory or file to scan]
-
+2. Install the libraries: pip install pwntools paramiko
+3. Place your wordlist file in the same directory or update the path in the script.
+4. Edit the `HOST` and `USERNAME` variables in the script as needed. 
+5. Run the app using one of the following methods:
+  - Terminal (macOS/Linux): 'python3 ssh-login-bruteforce.py'
+  - Windows (or IDEs like VS Code, PyCharm): 'python main.py' or use the Run button
+6. Note that ssh server needs to be enabled for the script to run. By default ssh server is not enabled in Linux, use the following commands:
+  - sudo systemctl status ssh - see the status of your ssh server
+  - sudo systemctl start ssh - starts the ssh server
+  - sudo systemctl stop ssh - stops the ssh server
+    
 ## Disclaimer
 While the shellcode loader and associated materials have been developed with research and educational objectives, the ethical and legal implications of its use are dependent upon user discretion. Ensure adherence to laws and guidelines relevant to your jurisdiction and organizational policies.
 

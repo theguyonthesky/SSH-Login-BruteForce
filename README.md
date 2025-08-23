@@ -1,4 +1,4 @@
-# Shellcode Loader 🔐
+# SSH Login BruteForce 🔐
 
 # Overview
 The SSH Brute-Force Script is a Python-based tool designed to automate the process of testing a list of commonly used passwords against an SSH server. It uses the powerful pwntools library along with paramiko to attempt logins on a specified host and username. The goal is to identify valid credentials during penetration testing or in educational lab environments.

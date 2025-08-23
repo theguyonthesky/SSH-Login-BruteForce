@@ -15,12 +15,10 @@ The SSH Brute-Force Script is a Python-based tool designed to automate the proce
   
 # How It Works
 1. The script reads a password list file line by line.
-
 2. For each password:
-- Attempts an SSH login using the `ssh()` method from `pwntools`.
-- If successful, prints the valid password and exits.
-- If login fails (triggering a `paramiko.AuthenticationException`), it continues to the next password.
-
+   - Attempts an SSH login using the `ssh()` method from `pwntools`.
+   - If successful, prints the valid password and exits.
+   - If login fails (triggering a `paramiko.AuthenticationException`, which is used under the hood by `pwntools`), it continues to the next password.
 3. Tracks and displays the number of attempts made.
 
 

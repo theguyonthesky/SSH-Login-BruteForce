@@ -23,13 +23,13 @@ The SSH Brute-Force Script is a Python-based tool designed to automate the proce
 
 
 # Tools and Technologies Used
-- C++ – Main programming language
+- Python – Main programming language
 
-- Windows API – For memory allocation, cryptographic operations (including AES decryption using `CryptAcquireContext`, `CryptDeriveKey`, etc.), and process/thread management
+- pwntools – For easy SSH interactions and exploit development
 
-- Havoc C2 – A lightweight post-exploitation command and control framework, used alongside this loader to manage compromised machines
+- paramiko – Handles SSH authentication exceptions
 
-- YARA – For writing and testing custom detection rules
+- Linux (Kali) – Typical target/test environment
 
 # Files
 - `ShellCodeLoader.cpp`: Contains the C++ code for the shellcode loader, involving dynamic API call resolution, AES decryption, and shellcode execution in a newly allocated memory region. Please reference this file for a detailed code walkthrough.

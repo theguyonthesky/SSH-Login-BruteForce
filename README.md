@@ -14,15 +14,15 @@ The SSH Brute-Force Script is a Python-based tool designed to automate the proce
 - Timeout Configuration: Configurable timeout to keep attempts responsive and avoid long delays
   
 # How It Works
-1. AES-encrypted shellcode and a decryption key are embedded in the loader.
+1. The script reads a password list file line by line.
 
-2. Windows Crypto API is used to decrypt the payload in memory.
+2. For each password:
+- Attempts an SSH login using the `ssh()` method from `pwntools`.
+- If successful, prints the valid password and exits.
+- If login fails (triggering a `paramiko.AuthenticationException`), it continues to the next password.
 
-3. The loader dynamically resolves functions like `VirtualAlloc`, `CreateThread`, and `CryptAcquireContext` to evade static detection.
+3. Tracks and displays the number of attempts made.
 
-4. The decrypted shellcode is injected into memory and executed, bypassing Windows Defender due to the use of dynamic API resolution and encryption.
-
-5. A YARA rule can be used to scan systems for artifacts of the loader.
 
 # Tools and Technologies Used
 - C++ – Main programming language

@@ -52,7 +52,7 @@ The SSH Brute-Force Script is a Python-based tool designed to automate the proce
    - sudo systemctl stop ssh - stop the ssh server
     
 ## Disclaimer
-While the shellcode loader and associated materials have been developed with research and educational objectives, the ethical and legal implications of its use are dependent upon user discretion. Ensure adherence to laws and guidelines relevant to your jurisdiction and organizational policies.
+This project is created for research, ethical hacking, and educational purposes only. Unauthorized access to computer systems is illegal. Always ensure you have explicit permission before testing any systems. The developer is not responsible for any misuse of this code.
 
 ## Contribution & Feedback
 Contributions, feedback, and issues can be submitted via the GitHub repository. Ensure that your interactions adhere to the GitHub Community Guidelines to maintain a respectful and collaborative environment.

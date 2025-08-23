@@ -41,11 +41,11 @@ The SSH Brute-Force Script is a Python-based tool designed to automate the proce
 # How to Run
 1. Clone or download this repository
 2. Install the libraries: pip install pwntools paramiko
-3. Place your wordlist file in the same directory or update the path in the script.
+3. Place your wordlist file in the same directory as the script, or update the file path in the code.
 4. Edit the `HOST` and `USERNAME` variables in the script as needed. 
 5. Run the app using one of the following methods:
-  - Terminal (macOS/Linux): 'python3 ssh-login-bruteforce.py'
-  - Windows (or IDEs like VS Code, PyCharm): 'python main.py' or use the Run button
+   - Terminal (macOS/Linux): 'python3 ssh-login-bruteforce.py'
+   - Windows (or IDEs like VS Code, PyCharm): 'python main.py' or use the Run button
 6. Note that ssh server needs to be enabled for the script to run. By default ssh server is not enabled in Linux, use the following commands:
   - sudo systemctl status ssh - see the status of your ssh server
   - sudo systemctl start ssh - starts the ssh server

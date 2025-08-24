@@ -7,7 +7,7 @@ The SSH Brute-Force Script is a Python-based tool designed to automate the proce
 - Security and Ethical Notice: This script is intended for educational and ethical hacking purposes only. It must only be used in environments you own or have explicit permission to test. Do not use the provided code and techniques for illegal activities.
   
 # Features
-- Password List Reading: Reads passwords from a wordlist (top20ssh-common-passwords.txt)
+- Password List Reading: Reads passwords from a wordlist (`top20ssh-common-passwords.txt`)
 - Automated SSH Attempts: Iteratively attempts SSH logins against a specified host and user
 - Success Detection: Detects successful login and displays the correct password
 - Error Handling: Handles authentication failures 

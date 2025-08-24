@@ -25,18 +25,18 @@ The SSH Brute-Force Script is a Python-based tool designed to automate the proce
 
 
 # Tools and Technologies Used
-- Python – Main programming language
+- Python – Main programming language.
 
-- `pwntools` – For easy SSH interactions and exploit development
+- `pwntools` – For easy SSH interactions and exploit development.
 
-- `paramiko` – Handles SSH authentication exceptions
+- `paramiko` – Handles SSH authentication exceptions.
 
-- Linux (Kali) – Typical target/test environment
+- Linux (Kali) – Typical target/test environment.
 
 # Files
 - `ssh_bruteforce.py`: The main python script that performs the SSH brute-force attack.
 
-- `top20ssh-common-passwords.txt`: A password list of 20 commonly used SSH credentials. (You can use any .txt wordlist or create your own)
+- `top20ssh-common-passwords.txt`: A password list of 20 commonly used SSH credentials. (You can use any .txt wordlist or create your own).
 
 # How to Run
 1. Clone or download this repository
